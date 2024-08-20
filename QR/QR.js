@@ -21,11 +21,12 @@ const foodItems = [
 
 let cart = [];
 
+// Simulate data.json object for storing orders
+let ordersData = [];
+
 scanBtn.addEventListener('click', () => {
     cameraView.classList.remove('hidden');
-    //  html5QrCode = new html5QrCode("reader");
-     var html5QrCode = new Html5Qrcode("reader");
-
+    const html5QrCode = new Html5Qrcode("reader");
 
     html5QrCode.start(
         { facingMode: "environment" },
@@ -107,29 +108,63 @@ bookNowBtn.addEventListener('click', () => {
         table: tableNumber,
         items: cart,
         total: totalAmount.textContent,
-        dateTime: formattedDateTime
+        dateTime: formattedDateTime,
+        status: "Food is preparing"
     };
 
     saveOrderToLocalStorage(orderDetails);
 
+    // Show the preparing message
+    messageDiv.classList.remove('hidden');
+    messageDiv.textContent = 'Your food is preparing!';
+
+    // After 5 seconds, remove the preparing message and update order status
     setTimeout(() => {
-        cart = [];
-        updateCart();
-        bookNowBtn.classList.add('hidden');
-        messageDiv.classList.remove('hidden');
-        messageDiv.textContent = 'Your food is ready!';
+        messageDiv.classList.add('hidden');
+        updateOrderInLocalStorage(orderDetails);
         notifyUserFoodReady(orderDetails);
     }, 5000);
+
+    cart = [];
+    updateCart();
 });
 
 function saveOrderToLocalStorage(orderDetails) {
-    let orders = JSON.parse(localStorage.getItem('orders')) || [];
-    orders.push(orderDetails);
-    localStorage.setItem('orders', JSON.stringify(orders));
+    ordersData.push(orderDetails);
+    localStorage.setItem('orders', JSON.stringify(ordersData));
+}
+
+function updateOrderInLocalStorage(orderDetails) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const orderIndex = orders.findIndex(order => order.table === orderDetails.table && order.dateTime === orderDetails.dateTime);
+    if (orderIndex !== -1) {
+        orders[orderIndex].status = "Food is ready!";
+        localStorage.setItem('orders', JSON.stringify(orders));
+    }
 }
 
 function notifyUserFoodReady(orderDetails) {
-    alert(`Notification: Food for table ${orderDetails.table} is ready!`);
+    messageDiv.classList.remove('hidden');
+    messageDiv.textContent = 'Your food is ready!';
+
+    // Show this in the View Orders section too
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orderHistory.innerHTML = '';
+    orders.forEach((order, index) => {
+        orderHistory.innerHTML += `
+            <div>
+                <strong>Order ${index + 1}:</strong>
+                <p>Table: ${order.table}</p>
+                <p>Date & Time: ${order.dateTime}</p>
+                <p>Total: $${order.total}</p>
+                <p>Status: ${order.status}</p>
+                <ul>
+                    ${order.items.map(item => `<li>${item.name} - $${item.cost}</li>`).join('')}
+                </ul>
+            </div>
+            <hr>
+        `;
+    });
 }
 
 viewOrdersBtn.addEventListener('click', () => {
@@ -148,6 +183,7 @@ viewOrdersBtn.addEventListener('click', () => {
                 <p>Table: ${order.table}</p>
                 <p>Date & Time: ${order.dateTime}</p>
                 <p>Total: $${order.total}</p>
+                <p>Status: ${order.status}</p>
                 <ul>
                     ${order.items.map(item => `<li>${item.name} - $${item.cost}</li>`).join('')}
                 </ul>

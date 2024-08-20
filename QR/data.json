@@ -1,0 +1,12 @@
+[
+    {
+        "table": "1",
+        "items": [
+            { "name": "Burger", "cost": 5 },
+            { "name": "Pizza", "cost": 8 }
+        ],
+        "total": 13,
+        "dateTime": "2024-08-20 12:34:56",
+        "status": "Food is preparing"
+    }
+]

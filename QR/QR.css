@@ -94,4 +94,10 @@ h3 {
     margin-top: 20px;
     font-size: 16px;
     color: #28a745;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
