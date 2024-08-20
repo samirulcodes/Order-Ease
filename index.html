@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
-       
+
         <div class="logo">
             <img src="/img/logo.png" alt="Restaurant Logo">
         </div>
-        
+
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -22,11 +24,9 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        
+
     </nav>
     <!-- Hero Section -->
     <section class="hero">
@@ -35,7 +35,8 @@
                 Made Order <span>Ease</span>
             </h2>
             <h1>Welcome To <br> Our <span>India</span><br> Restaurant.</h1>
-           <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape from the hustle and bustle </p>
+            <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape
+                from the hustle and bustle </p>
             <a href="#" class="hero-btn">Check Our Menu</a>
         </div>
         <div class="hero-image">
@@ -43,7 +44,53 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="path/to/logo.png" alt="Logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tenetur.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-glass-cheers"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-hours">
+                <h4>Open Hours</h4>
+                <p>Mon-Thurs: 9am - 10pm</p>
+                <p>Fri-Sun: 11am - 11pm</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-company">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechieCoder. All Rights Reserved.</p>
+            <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </footer>
+
     
+    <!-- Add Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
     <!-- script for menu toggle -->
@@ -52,7 +99,18 @@
             var navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('active');
         });
-        
+
+    </script>
+
+
+    <!-- script for moving up -->
+    <script>
+        // script.js
+        document.getElementById("back-to-top").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
     </script>
 </body>
+
 </html>
