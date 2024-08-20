@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
-       
+
         <div class="logo">
             <img src="/img/logo.png" alt="Restaurant Logo">
         </div>
-        
+
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -26,7 +28,7 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        
+
     </nav>
     <!-- Hero Section -->
     <section class="hero">
@@ -35,16 +37,60 @@
                 Made Order <span>Ease</span>
             </h2>
             <h1>Welcome To <br> Our <span>India</span><br> Restaurant.</h1>
-           <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape from the hustle and bustle </p>
-            <a href="#" class="hero-btn">Check Our Menu</a>
+            <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape
+                from the hustle and bustle </p>
+            <a href="/QR/QR.html" class="hero-btn">Order Now</a>
         </div>
         <div class="hero-image">
             <img src="/img/sushi.jpeg" alt="Sushi Dish">
         </div>
     </section>
 
-    
 
+    <!-- Book Table -->
+    <div class="container1">
+        <div class="header1">
+            <button class="book-table-btn" id="bookTableBtn">Book Table</button>
+            <h1 class="title">Opening Table</h1>
+            <div class="contact-info">
+                <div class="days">
+                    <p class="p1">Monday To Thursday</p>
+                    <p class="p2">9:00 Am - 22:00 Pm</p>
+                </div>
+                <div class="phone-number">
+                    <img id="phone-logo" src="/img/phono-logo.jpg" alt="Phone">
+                    <p>+91 - 8866998866</p>
+                </div>
+                <div class="days">
+                    <p class="p1" id="p">Friday To Sunday</p>
+                    <p class="p2">11:00 Am To 20:00 Pm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Table Booking -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="book-table">Book a Table</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required min="1" max="20">
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
     <!-- script for menu toggle -->
     <script>
@@ -52,7 +98,71 @@
             var navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('active');
         });
-        
+
     </script>
+
+
+    <!-- script for book table -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("bookingModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("bookTableBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        document.getElementById("bookingForm").onsubmit = function (e) {
+            e.preventDefault();
+
+            // Get form values
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            var guests = document.getElementById("guests").value;
+
+            // Create a booking object
+            var booking = {
+                name: name,
+                phone: phone,
+                date: date,
+                time: time,
+                guests: guests
+            };
+
+            // Save booking to local storage
+            localStorage.setItem("booking", JSON.stringify(booking));
+
+            // Confirmation message
+            alert("Table booked successfully!");
+
+            // Close the modal
+            modal.style.display = "none";
+        };
+
+    </script>
+
+
 </body>
+
 </html>
