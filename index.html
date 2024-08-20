@@ -10,9 +10,11 @@
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
+       
         <div class="logo">
             <img src="/img/logo.png" alt="Restaurant Logo">
         </div>
+        
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -26,12 +28,14 @@
         </ul>
         
     </nav>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome To <br> Our <span>India</span> Restaurant.</h1>
-            <p>This is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam eius vel tempore consectetur nesciunt? Nam eius tenetur recusandae optio aperiam.</p>
+            <h2 class="order-ease">
+                Made Order <span>Ease</span>
+            </h2>
+            <h1>Welcome To <br> Our <span>India</span><br> Restaurant.</h1>
+           <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape from the hustle and bustle </p>
             <a href="#" class="hero-btn">Check Our Menu</a>
         </div>
         <div class="hero-image">
@@ -39,9 +43,10 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    
 
 
+    <!-- script for menu toggle -->
     <script>
         document.getElementById('mobile-menu').addEventListener('click', function () {
             var navLinks = document.getElementById('nav-links');

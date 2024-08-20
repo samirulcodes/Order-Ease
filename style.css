@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    background-color: white;
+    background-color: rgb(230, 217, 217);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -75,48 +75,42 @@ body {
 }
 
 /* Hero Section Styles */
+.order-ease span{
+    text-align: start;
+    color: #cb257b;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px 100px;
     background-color: #fff;
-    /* background-image: url('/img/leaf.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; */
-}
-
-/* .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('/img/leaf.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(10px); /* Adjust blur radius as needed */
-    /* z-index: -1; */ 
-
+    position: relative;
+}
 
 .hero-content h1 {
-    font-size: 60px;
-    line-height: 1.2;
-    color: #333;
+    font-size: 70px;
+    line-height: 1;
+    color: #000;
 }
 
 .hero-content h1 span {
     color: #ff7849;
+    
 }
 
 .hero-content p {
     margin: 20px 0;
     font-size: 18px;
-    color: #666;
+    color: #3a2e2e;
 }
 
 .hero-btn {
@@ -140,6 +134,108 @@ body {
     border-radius: 50%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* QR SECTION */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#cameraView {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#reader {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-selection {
+    margin: 20px 0;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+#foodMenu {
+    margin-top: 20px;
+}
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#cartItems {
+    margin-top: 10px;
+    text-align: left;
+}
+
+#orderHistory {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #28a745;
+}
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
