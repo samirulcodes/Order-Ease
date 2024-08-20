@@ -184,6 +184,92 @@ body {
 }
 
 
+/* footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo p {
+    margin: 20px 0;
+    color: #333;
+}
+
+.social-icons a {
+    color: #ff5722;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff8a50;
+}
+
+.footer-hours h4, .footer-links h4, .footer-company h4 {
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-links ul, .footer-company ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-company ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-company ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-company ul li a:hover {
+    color: #ff5722;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-bottom p {
+    color: #333;
+}
+
+#back-to-top {
+    background-color: #ff5722;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #ff8a50;
+}
+
+
 
 /* Book Table */
 .container1 {
