@@ -40,10 +40,12 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+   
 }
 
 .nav-links li {
     margin: 0 20px;
+  
 }
 
 .nav-links a {
@@ -51,6 +53,7 @@ body {
     color: #333;
     font-weight: bold;
     transition: color 0.3s;
+    
 }
 
 .nav-links a:hover {
@@ -59,6 +62,7 @@ body {
     padding: 5px;
     font-weight: 500;
      box-shadow: 3px 1px 1px 1px #ff7849;
+
 }
 
 .nav-icons {
@@ -80,62 +84,6 @@ body {
     margin: 0 10px;
     cursor: pointer;
 }
-
-/* how it works */
-
-.cont{
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 50vh;
-      background-color: #f7f7f7;
-}
-
-.how-it-works {
-    text-align: center;
-    padding: 50px;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-
-  .steps-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .step {
-    flex: 1;
-    margin: 0 15px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .step i {
-    font-size: 40px;
-    color: #f8cc3c;
-    margin-bottom: 20px;
-  }
-
-  .step p {
-    font-size: 1rem;
-    font-weight: normal;
-    color: #666;
-  }
-
-  .step p span {
-    color: black;
-    font-weight: bold;
-  }
-
 
 
 /* Hero Section Styles */
@@ -177,6 +125,11 @@ body {
     color: #3a2e2e;
 }
 
+#wlcm{
+    color: #000;
+    font-weight: 600;
+}
+
 .hero-btn {
     display: inline-block;
     padding: 15px 30px;
@@ -187,6 +140,10 @@ body {
     font-weight: bold;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    transition: transform 0.5s;
+}
+.hero-btn:hover{
+    transform: scale(1.05);
 }
 
 .hero-btn:hover {
@@ -198,6 +155,71 @@ body {
     border-radius: 50%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
+/* how it works */
+
+.cont{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+      background-color: #f7f7f7;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+  }
+
+ 
+
+  .step {
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+
+  .step:hover{
+    transform: scale(1.05);
+  }
+  .step i {
+    font-size: 40px;
+    color: #f8cc3c;
+    margin-bottom: 20px;
+  }
+
+  .step p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+  }
+
+  .step p span {
+    color: black;
+    font-weight: bold;
+  }
+
+
 
 
 
@@ -222,10 +244,10 @@ body {
 
     .nav-links {
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: white;
+        background-color: rgb(223, 193, 193);
         flex-direction: column;
         align-items: center;
         display: none;
@@ -244,6 +266,194 @@ body {
     }
 }
 
+
+/* offer section */
+
+  
+  .offer-container {
+    background-image: url('/img/offer-bgc.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 80%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.578);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+#spl-ofr{
+    text-align: center;
+    color: #2e2828;
+    font-weight: 100;
+  }
+
+  #spl-ofr span{
+    color: #0f0e0e;
+    font-weight: 700;
+    font-size: 35px;
+  }
+
+
+  .offers {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .offer-box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: transparent;
+  }
+  
+  .offer-box h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .offer-box p {
+    font-size: 24px;
+    color: #444;
+    font-weight: 700;
+  }
+  
+  .offer-box ul {
+    list-style-type: none;
+    margin: 10px 0;
+  }
+  
+  .offer-box ul li {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .purchase-btn {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: transform 0.4s;
+  }
+  .purchase-btn:hover{
+    transform: scale(1.05);
+  }
+  
+  .purchase-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  @media (max-width: 768px) {
+    .offers {
+      flex-direction: column;
+    }
+  
+    .offer-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+/* Our special menu */
+
+header h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+}
+
+#spl-menu{
+    text-align: center;
+    margin-top: 20px;
+}
+#spl-menu span{
+    color: #cb257b;
+}
+.item-name{
+    text-align: center;
+}
+
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    color: #555;
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.more-menu-container{
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#more-menu{
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff7849;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#more-menu span{
+    color: rgb(24, 82, 207);
+}
+
+#more-menu:hover{
+    background-color: #ff4500;
+    transition:0.5s;
+}
+
+@media (max-width: 768px) {
+    .menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 70%;
+    }
+    .menu-item img{
+        width: 100%;
+    }
+}
 
 
 
@@ -343,6 +553,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+   transition: transform 0.5s;
+}
+
+.book-table-btn:hover{
+    transform: scale(1.05);
 }
 
 .book-table-btn:hover {

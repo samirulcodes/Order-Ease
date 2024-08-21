@@ -29,15 +29,13 @@
     </nav>
 
 
-    
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h2 class="order-ease">
                 Made Order <span>Ease</span>
             </h2>
-            <h1>Welcome To <br> Our <span>India</span><br> Restaurant.</h1>
+            <h1 id="wlcm">Welcome To <br> Our <span>India</span><br> Restaurant.</h1>
             <p> Tucked away on a quiet street, India Restaurant is a charming bistro that offers a delightful escape
                 from the hustle and bustle </p>
             <a href="/QR/QR.html" class="hero-btn">Order Now</a>
@@ -69,6 +67,83 @@
         </div>
       </div>
       </div>
+
+      <!-- offers section -->
+      <div class="offer-container">
+        <div class="overlay">
+            <h1 id="spl-ofr">Our <span>Special Offers</span></h1>
+          <div class="offers">
+            <div class="offer-box">
+              <h3>2 FOR $10</h3>
+              <p class="choice">Choice of 2:</p>
+              <ul>
+                <li>Soup</li>
+                <li>1/2 Acai Bowl</li>
+                <li>1/2 Sandwich</li>
+              </ul>
+              <button class="purchase-btn" onclick="purchaseNow()">Purchase Now</button>
+            </div>
+            <div class="offer-box">
+              <h3>1 DAY FREE</h3>
+              <p>When You Buy 6 Days</p>
+              <h4>7 Day Detox Cleanse Program:</h4>
+              <ul>
+                <li>Includes 1/2 Acai Bowl or Smoothie</li>
+                <li>7 Days Plans Starting At $42</li>
+              </ul>
+              <button class="purchase-btn" onclick="purchaseNow()">Purchase Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Our special menu -->
+      <header>
+        <h1 id="spl-menu">Our <span>Special Menu</span></h1>
+    </header>
+
+    <section class="menu-section">
+        <div class="menu-item">
+            <img src="/img/menu/food-1.jpeg" alt="Food 1">
+            <h3 class="item-name">Grilled Steak</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-2.jpeg" alt="Food 2">
+            <h3 class="item-name">Caesar Salad</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-3.jpeg" alt="Food 3">
+            <h3 class="item-name">Pasta Carbonara</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-4.jpeg" alt="Food 4">
+            <h3 class="item-name">Chicken Burger</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-5.jpeg" alt="Food 1">
+            <h3 class="item-name">Grilled Leg pcs</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-6.jpeg" alt="Food 2">
+            <h3 class="item-name">Special Thali</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-7.jpeg" alt="Food 3">
+            <h3 class="item-name">Our Special Dosa</h3>
+        </div>
+        <div class="menu-item">
+            <img src="/img/menu/food-8.jpeg" alt="Food 4">
+            <h3 class="item-name">Grilled Fish</h3>
+        </div>
+    </section>
+
+    <div class="more-menu-container">
+        <a href="/QR/QR.html" id="more-menu">for more menu <span>click here</span></a>
+    </div>
+
+    
+
 
     <!-- booking table -->
     <div class="container1">
@@ -171,6 +246,14 @@
         });
 
     </script>
+
+
+    <!-- script for offer section , purchase now -->
+     <script>
+        function purchaseNow(){
+            window.location.href="/QR/QR.html"
+        }
+     </script>
 
 
     <!-- script for moving up -->
