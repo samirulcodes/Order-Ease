@@ -16,7 +16,17 @@ const foodItems = [
     { name: 'Burger', cost: 5 },
     { name: 'Pizza', cost: 8 },
     { name: 'Pasta', cost: 7 },
-    { name: 'Salad', cost: 4 }
+    { name: 'Caesar Salad', cost: 5 },
+    { name: 'Grilled Steak', cost: 9 },
+    { name: 'Pasta Carbonara', cost: 7 },
+    { name: 'Grilled Leg pcs', cost: 6 },
+    { name: 'Special Thali', cost: 10 },
+    { name: 'Our Special Dosa', cost: 6 },
+    { name: 'Grilled Fish', cost: 7 },
+    { name: 'Chicken Bharta', cost: 5 },
+    { name: 'Butter Naan', cost: 2 },
+    { name: 'Tutty Fruity', cost: 4 },
+    { name: 'Firni', cost: 4 },
 ];
 
 let cart = [];
