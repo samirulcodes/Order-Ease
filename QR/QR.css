@@ -1,3 +1,16 @@
+/* page refresh animation */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
 body {
     font-family: Arial, sans-serif;
     /* background-color: #f8f9fa; */
@@ -10,6 +23,8 @@ body {
     min-height: 100vh;
     background: url('/img/qr-bgc.jpg') no-repeat center center fixed;
     background-size: cover;
+    animation: fadeInAnimation ease 3s; /* page refresh animation */
+    animation-fill-mode: forwards;
 }
 
 
@@ -25,7 +40,7 @@ body {
     /* background: transparent; */
 }
 
-.text{
+.text {
     font-size: 40px;
     /* color: rgb(234, 229, 229);
     text-shadow: 2px 2px 4px #322d2d; */
@@ -33,20 +48,21 @@ body {
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-.text-1{
+.text-1 {
     color: rgb(234, 229, 229);
     text-shadow: 2px 2px 4px #322d2d;
     font-size: 30px;
 }
 
-.text-1 span{
+.text-1 span {
     color: coral;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     /* text-shadow: 2px 2px 4px #322d2d; */
     font-size: 25px;
     font-weight: 700;
-    
+
 }
+
 /* 
 .container2{
     /* background-color: #ffffff;
@@ -75,12 +91,12 @@ body {
 
 .btn:hover {
     color: #000;
-    background-color:rgb(161, 159, 159);
-  box-shadow: 0px 12px 20px rgba(0, 123, 255, 0.4);
-  transform: translateY(-3px);
+    background-color: rgb(161, 159, 159);
+    box-shadow: 0px 12px 20px rgba(0, 123, 255, 0.4);
+    transform: translateY(-3px);
 }
 
-.btn:active{
+.btn:active {
     background-color: #00408d;
     box-shadow: 0px 5px 10px rgba(0, 123, 255, 0.2);
     transform: translateY(0);
@@ -151,19 +167,26 @@ h3 {
 }
 
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
-.back-btn{
+.back-btn {
     position: absolute;
-    bottom: 20px; /* Distance from the bottom */
+    bottom: 20px;
+    /* Distance from the bottom */
     left: 10px;
     position: fixed;
-    
+
 }
-#btn-1{
+
+#btn-1 {
     /* transform: translateY(5); */
     color: #000;
     background-color: #fff;
@@ -173,12 +196,12 @@ h3 {
     font-weight: 500;
     padding: 10px;
     border-radius: 20px;
-    
+
 }
 
-#btn-1:hover{
+#btn-1:hover {
     color: #fff;
-    background-color:#000;
-  box-shadow: 0px 12px 20px rgba(0, 123, 255, 0.4);
-  transform: translateY(-3px);
+    background-color: #000;
+    box-shadow: 0px 12px 20px rgba(0, 123, 255, 0.4);
+    transform: translateY(-3px);
 }

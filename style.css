@@ -1,3 +1,13 @@
+/* page refresh animation */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -10,7 +20,8 @@ body {
     background-color: #f7f7f7;
     background: url('') no-repeat center center fixed;
     background-size: cover;
-    
+    animation: fadeInAnimation ease 3s;
+    animation-fill-mode: forwards; 
 }
 
 /* Navbar Styles */
